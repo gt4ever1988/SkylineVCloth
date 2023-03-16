@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>SkylineVCloth.snk</AssemblyOriginatorKeyFile>
+	<Version>1.0.0</Version>
+	<Authors>GT4EVER1988</Authors>
+	<Company>SkylineV</Company>
+	<Copyright>GT4EVER1988</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AltV.Net" Version="13.0.20" />
+    <PackageReference Include="AltV.Net.Async" Version="13.0.20" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
