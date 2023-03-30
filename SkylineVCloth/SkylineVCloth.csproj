@@ -3,7 +3,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <SignAssembly>True</SignAssembly>
+    <SignAssembly>False</SignAssembly>
     <AssemblyOriginatorKeyFile>SkylineVCloth.snk</AssemblyOriginatorKeyFile>
 	<Version>1.0.0</Version>
 	<Authors>GT4EVER1988</Authors>
