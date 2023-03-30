@@ -1,3 +1,5 @@
+Dieses Skript ist für den [alt:V-Launcher](https://altv.mp), Optimiert für [Durty Cloth Tool](https://github.com/DurtyFree/durty-cloth-tool).
+
 ## Minimaler Testaufbau
 Grunddaten laden, bei jedem Serverstart
 ```
@@ -17,7 +19,7 @@ SkylineVCloth.Cloth.Equip(player, '["DLC_MP_HEIST_M_TORSO_74_0","DLC_MP_H3_M_LEG
 ```
 
 ## Funktionsübersicht
-Im Standard werden originale Klamotten/Props von Github (Danke an DurtyFree) immer live geladen wodurch diese automatisch bei GTA-Updates verwendet werden können. Wenn dies nicht gewünscht ist kann hier angegeben werden in welchem Verzeichniss die Initialisierung nach Stammdaten suchen soll.
+Im Standard werden originale [Klamotten/Props](https://github.com/DurtyFree/gta-v-data-dumps) von Github (Danke an [DurtyFree](https://github.com/DurtyFree)) immer live geladen wodurch diese automatisch bei GTA-Updates verwendet werden können. Wenn dies nicht gewünscht ist kann hier angegeben werden in welchem Verzeichniss die Initialisierung nach Stammdaten suchen soll.
 ```
 SkylineVCloth.Cloth.OriginalDumpDirectory = "data";
 SkylineVCloth.Cloth.OriginalDumpFilename = "pedComponentVariations_free.json";
@@ -32,22 +34,23 @@ Diese Funktion initialisiert die Kleidung-Stammdaten welche einmal zum Serversta
 ```
 SkylineVCloth.Cloth.InitAsync();
 ```
-Zeigt anhand Alt.Log-Ausgaben geladene Kleidung/Zubehör getrennt für Mann/Frau an - wird im Standard einmal mit der InitAsync() ausgelöst
+Zeigt anhand [Alt.Log](https://docs.altv.mp/articles/logging.html)-Ausgaben geladene Kleidung/Zubehör getrennt für Mann/Frau an - wird im Standard einmal mit der InitAsync() ausgelöst
 ```
 SkylineVCloth.Cloth.Statistic();
 ```
-Hier können einzelne ClothHash (bspw. DLC_MP_X17_M_SPECIAL_7_0) oder eine List<string> sowie JSON(List<string>) übergeben werden um gewisse Hashs als "Blacklist" zu markieren welche durch Anzieh-Funktionen ignoriert werden.
+
+Hier können einzelne ClothHash (bspw. [DLC_MP_X17_M_SPECIAL_7_0](https://forge.plebmasters.de/clothes/?search=DLC_MP_X17_M_SPECIAL_7_0)) oder eine List<string> sowie JSON(List<string>) übergeben werden um gewisse Hashs als "Blacklist" zu markieren welche durch Anzieh-Funktionen ignoriert werden.
 > List<string> nameHashs ... Gibt eine Liste von NameHashs an / string nameHash ... Gibt den NameHash oder ein JSON mit einer Liste von NameHashs an
 ```
 SkylineVCloth.Cloth.Blacklist();
 ```
 Lädt verfügbare Klamotten anhand Komponente welche optional die Blacklist ignoriert. Eine List<DumpResult> wird zurückgeliefert.
-> bool male ... Gibt an ob für einen Mann (true) oder für eine Frau (false) Klamotten geladen werden sollen / byte componentId ... Gibt die Komponent-ID an welche Daten geladen werden sollen, bspw. 6 für Schuhe / bool includeBlacklist = false ... Gibt an ob aktivierte Blacklist-Hashs ausgeschlossen (true) oder eingeschlossen (false) werden sollen
+> bool male ... Gibt an ob für einen Mann (true) oder für eine Frau (false) Klamotten geladen werden sollen / byte componentId ... Gibt die Komponent-ID an welche Daten geladen werden sollen, bspw. [6 für Schuhe](https://github.com/DurtyFree/durty-cloth-tool/wiki/Model-and-texture-file-naming#possible-drawable-types-components--props) / bool includeBlacklist = false ... Gibt an ob aktivierte Blacklist-Hashs ausgeschlossen (true) oder eingeschlossen (false) werden sollen
 ```
 SkylineVCloth.Cloth.GetCloths();
 ```
 Lädt verfügbare Props anhand Komponente welche optional die Blacklist ignoriert. Eine List<DumpResult> wird zurückgeliefert.
-> bool male ... Gibt an ob für einen Mann (true) oder für eine Frau (false) Props geladen werden sollen / byte componentId ... Gibt die Komponent-ID an welche Daten geladen werden sollen, bspw. 6 für Uhren / bool includeBlacklist = false ... Gibt an ob aktivierte Blacklist-Hashs ausgeschlossen (true) oder eingeschlossen (false) werden sollen
+> bool male ... Gibt an ob für einen Mann (true) oder für eine Frau (false) Props geladen werden sollen / byte componentId ... Gibt die Komponent-ID an welche Daten geladen werden sollen, bspw. [6 für Uhren](https://github.com/DurtyFree/durty-cloth-tool/wiki/Model-and-texture-file-naming#possible-drawable-types-components--props) / bool includeBlacklist = false ... Gibt an ob aktivierte Blacklist-Hashs ausgeschlossen (true) oder eingeschlossen (false) werden sollen
 ```
 SkylineVCloth.Cloth.GetProps();
 ```
